@@ -1,10 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-
-</body>
-</html>
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% block content %}
+    <form method="post">
+        {% csrf_token %}
+        <h1>Are you sure you want to delete task "{{ object }}"?    </h1>
+        {% buttons %}
+            <button type="submit" class="btn btn-danger">Confirm</button>
+            <button type="button" class="btn btn-warning">
+                <a href="{% url 'index' %}">Cancel</a>
+            </button>
+        {% endbuttons %}
+    </form>
+{% endblock %}

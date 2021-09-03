@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils.translation import gettext_lazy as _
+from django.contrib.auth import get_user_model
 
 
 class Base(models.Model):
@@ -14,6 +15,7 @@ class Base(models.Model):
 class Task(Base):
     task = models.CharField(_('Task'), max_length=200)
     date = models.DateTimeField(_('Date'))
+    author = models.ForeignKey(get_user_model(), verbose_name=_('Tasks'), on_delete=models.CASCADE)
 
     class Meta:
         verbose_name = _('Task')
