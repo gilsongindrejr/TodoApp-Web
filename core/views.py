@@ -15,6 +15,7 @@ class IndexView(ListView):
         context = super(IndexView, self).get_context_data(**kwargs)
         lang = translation.get_language()
         context['lang'] = lang
+        context['user'] = self.request.user.first_name
         return context
 
     def get_queryset(self):
@@ -26,6 +27,10 @@ class CreateTaskView(CreateView):
     template_name = 'task_form.html'
     fields = ['task', 'date']
     success_url = reverse_lazy('index')
+
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        return super().form_valid(form)
 
 
 class UpdateTaskView(UpdateView):

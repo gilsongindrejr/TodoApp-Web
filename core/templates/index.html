@@ -1,19 +1,35 @@
 {% extends 'base.html' %}
 {% block content %}
+<div class="container">
     <div class="row">
-        <h1>Tasks</h1>
-        <table class="table table-striped">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1>Tasks</h1>
+                </div>
+                <div class="col">
+                    <div class="row">
+                        <div class="col">
+                            <h3>Welcome {{ user }}</h3>
+                        </div>
+                        <div class="col">
+                            <a class="btn btn-warning" href="">Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <table id="table" class="table table-striped">
             <thead>
                 <tr>
-                    <th scope="col">#</th>
                     <th scope="col">Task</th>
                     <th scope="col">Date</th>
+                    <th scope="col"><a class="btn btn-success" href="{% url 'create' %}">New</a></th>
                 </tr>
             </thead>
             <tbody>
             {% for task in tasks %}
                 <tr>
-                    <td>{{ task.id }}</td>
                     <td>{{ task.task }}</td>
                     <td>{{ task.date }}</td>
                     <td>
@@ -25,4 +41,5 @@
             </tbody>
         </table>
     </div>
+</div>
 {% endblock %}

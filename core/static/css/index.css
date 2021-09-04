@@ -1,0 +1,14 @@
+html {
+    height: 100%;
+}
+
+#body {
+    height: 100%;
+    background: rgb(2,0,37);
+    background: linear-gradient(0deg, rgba(2,0,37,1) 0%, rgba(10,10,80,1) 19%, rgba(0,146,255,1) 100%);
+}
+
+#table {
+    background-color: #333333;
+    color: white;
+}
