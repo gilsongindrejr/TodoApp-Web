@@ -5,7 +5,8 @@ from .models import Task
 
 @admin.register(Task)
 class TaskAdmin(admin.ModelAdmin):
-    list_display = ('task', 'date', '_author')
+    list_display = ('task', 'date', '_author', 'is_completed')
+    list_filter = ('is_completed',)
     exclude = ['author',]
 
     def _author(self, instance):
