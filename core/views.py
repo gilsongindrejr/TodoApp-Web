@@ -1,12 +1,15 @@
+from django.contrib.messages.views import SuccessMessageMixin
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic import ListView
 from django.urls import reverse_lazy
 from django.utils import translation
 
 from .models import Task
+from .forms import RegisterForm
 
 
-class IndexView(ListView):
+class IndexView(LoginRequiredMixin, ListView):
     model = Task
     template_name = 'index.html'
     context_object_name = 'tasks'
@@ -22,7 +25,7 @@ class IndexView(ListView):
         return Task.objects.filter(author=self.request.user)
 
 
-class CreateTaskView(CreateView):
+class CreateTaskView(LoginRequiredMixin, CreateView):
     model = Task
     template_name = 'task_form.html'
     fields = ['task', 'date']
@@ -33,14 +36,21 @@ class CreateTaskView(CreateView):
         return super().form_valid(form)
 
 
-class UpdateTaskView(UpdateView):
+class UpdateTaskView(LoginRequiredMixin, UpdateView):
     model = Task
     template_name = 'task_form.html'
     fields = ['task', 'date']
     success_url = reverse_lazy('index')
 
 
-class DeleteTaskView(DeleteView):
+class DeleteTaskView(LoginRequiredMixin, DeleteView):
     model = Task
     template_name = 'delete.html'
     success_url = reverse_lazy('index')
+
+
+class RegisterView(SuccessMessageMixin, CreateView):
+    template_name = 'register.html'
+    success_url = reverse_lazy('login')
+    form_class = RegisterForm
+    success_message = 'User create successfully'

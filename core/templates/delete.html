@@ -6,9 +6,9 @@
         <h1>Are you sure you want to delete task "{{ object }}"?    </h1>
         {% buttons %}
             <button type="submit" class="btn btn-danger">Confirm</button>
-            <button type="button" class="btn btn-warning">
-                <a href="{% url 'index' %}">Cancel</a>
-            </button>
+        <a href="{% url 'index' %}">
+            <button type="button" class="btn btn-warning">Cancel</button>
+        </a>
         {% endbuttons %}
     </form>
 {% endblock %}

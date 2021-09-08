@@ -6,13 +6,11 @@
     <meta charset="UTF-8">
     <title>Todo App</title>
     {% bootstrap_css %}
-    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    {% bootstrap_javascript jquery='full' %}
 </head>
-<body id="body">
-<div class="container">
+<body class="text-center">
     {% block content %}
     {% endblock %}
-</div>
-{% bootstrap_javascript jquery='full' %}
+
 </body>
 </html>
