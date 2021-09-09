@@ -18,7 +18,7 @@ class IndexView(LoginRequiredMixin, ListView):
         context = super(IndexView, self).get_context_data(**kwargs)
         lang = translation.get_language()
         context['lang'] = lang
-        context['user'] = self.request.user.first_name
+        context['user'] = self.request.user
         return context
 
     def get_queryset(self):
@@ -53,4 +53,3 @@ class RegisterView(SuccessMessageMixin, CreateView):
     template_name = 'register.html'
     success_url = reverse_lazy('login')
     form_class = RegisterForm
-    success_message = 'User create successfully'

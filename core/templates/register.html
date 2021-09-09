@@ -1,12 +1,13 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<div class="container">
-    <h1 class="h3 mb-3 font-weight-normal mt-5">Register</h1>
+<div class="container bg-dark text-light pb-3" style="width:350px;">
+    <h1 class="h3 mb-3 font-weight-normal pt-3 mt-5">Register</h1>
     <form method="post" class="form-signin">
         {% csrf_token %}
         {{ form.as_p }}
         <input class="btn btn-primary" type="submit" value="Register">
+        <a class="btn btn-primary" href="{% url 'login' %}">Login</a>
     </form>
 </div>
 {% endblock %}

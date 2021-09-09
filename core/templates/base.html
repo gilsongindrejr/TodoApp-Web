@@ -1,16 +1,15 @@
 {% load bootstrap4 %}
 {% load static %}
 <!DOCTYPE html>
-<html lang="{{ lang }}">
+<html lang="{{ lang }}" style="height: 100%;">
 <head>
     <meta charset="UTF-8">
     <title>Todo App</title>
     {% bootstrap_css %}
     {% bootstrap_javascript jquery='full' %}
 </head>
-<body class="text-center">
+<body class="text-center" style="height: 100%; background: linear-gradient(0deg, rgba(2,0,37,1) 0%, rgba(10,10,80,1) 19%, rgba(0,146,255,1) 100%);">
     {% block content %}
     {% endblock %}
-
 </body>
 </html>

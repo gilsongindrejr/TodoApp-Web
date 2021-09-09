@@ -1,22 +1,22 @@
 {% extends 'base.html' %}
 {% block content %}
-<div class="container">
+<div class="container bg-dark text-light pb-3" style="width:350px;">
     <form method="post" class="form-signin">
         {% csrf_token %}
-        <h1 class="h3 mb-3 font-weight-normal mt-5">Login</h1>
+        <h1 class="h3 mb-3 font-weight-normal pt-3 mt-5">Login</h1>
 
         <label for="username" class="sr-only">Email</label>
-        <input type="email" id="username" name="username" class="form-control mb-3" placeholder="Email" required autofocus>
+        <input class="mb-3" type="email" id="username" name="username" placeholder="Email" required autofocus><br>
 
         <label for="password" class="sr-only">Password</label>
-        <input type="password" id="password" name="password" class="form-control mb-3" placeholder="Password" required>
+        <input type="password" id="password" name="password" placeholder="Password" required>
 
-        <div class="row">
-            <div class="col">
-                <button class="btn btn-lg btn-primary btn-block" type="submit" style="width:100px;">Login</button>
+        <div class="row mt-3">
+            <div class="col text-right pr-0">
+                <button class="btn btn-primary" type="submit">Login</button>
             </div>
-            <div class="col">
-                <a href="{% url 'register' %}" class="btn btn-lg btn-primary btn-block" style="width:100px;">Register</a>
+            <div class="col text-left mr-4 pl-1">
+                <a href="{% url 'register' %}" class="btn btn-primary" style="width:100px;">Register</a>
             </div>
         </div>
     </form>

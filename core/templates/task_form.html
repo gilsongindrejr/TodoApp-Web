@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% load bootstrap4 %}
 {% block content %}
+<div class="container bg-dark text-light mt-5 pt-3 pb-2">
     <h1>Create Task</h1>
     <form method="post">
         {% csrf_token %}
@@ -12,4 +13,5 @@
         </a>
         {% endbuttons %}
     </form>
+</div>
 {% endblock %}
