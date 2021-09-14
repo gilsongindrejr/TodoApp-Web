@@ -19,6 +19,7 @@ class IndexView(LoginRequiredMixin, ListView):
         lang = translation.get_language()
         context['lang'] = lang
         context['user'] = self.request.user
+        translation.activate(lang)
         return context
 
     def get_queryset(self):

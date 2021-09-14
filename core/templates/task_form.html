@@ -2,14 +2,14 @@
 {% load bootstrap4 %}
 {% block content %}
 <div class="container bg-dark text-light mt-5 pt-3 pb-2">
-    <h1>Create Task</h1>
+    <h1>{% trans 'Create Task' %}</h1>
     <form method="post">
         {% csrf_token %}
         {% bootstrap_form form %}
         {% buttons %}
-            <button type="submit" class="btn btn-primary">Save</button>
+            <button type="submit" class="btn btn-primary">{% trans 'Save' %}</button>
         <a href="{% url 'index' %}">
-            <button type="button" class="btn btn-warning">Cancel</button>
+            <button type="button" class="btn btn-warning">{% trans 'Cancel' %}</button>
         </a>
         {% endbuttons %}
     </form>

@@ -1,0 +1,149 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-09-14 12:36+0000\n"
+"PO-Revision-Date: 2021-09-14 09:40-0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.4.2\n"
+
+#: core/forms.py:10
+msgid "First name"
+msgstr "Nombre"
+
+#: core/forms.py:11
+msgid "Last name"
+msgstr "Apellido"
+
+#: core/forms.py:12
+msgid "Password"
+msgstr "Contraseña"
+
+#: core/forms.py:13
+msgid "Confirm Password"
+msgstr "confirmar Contraseña"
+
+#: core/models.py:7
+msgid "Author"
+msgstr "Autor"
+
+#: core/models.py:8 core/models.py:15 core/templates/index.html:25
+msgid "Task"
+msgstr "Tarea"
+
+#: core/models.py:9 core/templates/index.html:26
+msgid "Date"
+msgstr "Fecha"
+
+#: core/models.py:10
+msgid "Created"
+msgstr "Creado"
+
+#: core/models.py:11
+msgid "Modified"
+msgstr "Modificada"
+
+#: core/models.py:12
+msgid "Is Completed"
+msgstr "Está completado"
+
+#: core/models.py:16
+msgid "Tasks"
+msgstr "Tareas"
+
+#: core/templates/404.html:5
+msgid "404 - Page not Found"
+msgstr "404 - Pagina no encontrada"
+
+#: core/templates/delete.html:7
+msgid "Are you sure you want to delete task"
+msgstr "¿Estás seguro de que quieres eliminar la tarea?"
+
+#: core/templates/delete.html:9
+msgid "Confirm"
+msgstr "Confirmar"
+
+#: core/templates/delete.html:11 core/templates/task_form.html:12
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: core/templates/index.html:13
+msgid "User:"
+msgstr "Usuario:"
+
+#: core/templates/index.html:27
+msgid "New"
+msgstr "Nuevo"
+
+#: core/templates/index.html:36
+msgid "Edit"
+msgstr "Editar"
+
+#: core/templates/index.html:37
+msgid "Delete"
+msgstr "Borrar"
+
+#: core/templates/register.html:5
+msgid "Register"
+msgstr "Registrarse"
+
+#: core/templates/task_form.html:5
+msgid "Create Task"
+msgstr "Crear tarea"
+
+#: core/templates/task_form.html:10
+msgid "Save"
+msgstr "Ahorrar"
+
+#: users/admin.py:19
+msgid "Personal info"
+msgstr "Información personal"
+
+#: users/admin.py:20
+msgid "Permissions"
+msgstr "Permisos"
+
+#: users/admin.py:21
+msgid "Important dates"
+msgstr "Fechas importantes"
+
+#: users/models.py:12
+msgid "Email is required"
+msgstr "correo electronico es requerido"
+
+#: users/models.py:28
+msgid "Superuser must have is_staff=True"
+msgstr "El superusuario debe tener is_staff = True"
+
+#: users/models.py:30
+msgid "Superuser must have is_superuser=True"
+msgstr "El superusuario debe tener is_superuser = True"
+
+#: users/models.py:38
+msgid "first name"
+msgstr "nombre"
+
+#: users/models.py:39
+msgid "last name"
+msgstr "apellido"
+
+#, fuzzy
+#~| msgid "Email is required"
+#~ msgid "required"
+#~ msgstr "correo electronico es requerido"
+
+#, fuzzy
+#~| msgid "Email is required"
+#~ msgid "This field is required."
+#~ msgstr "correo electronico es requerido"

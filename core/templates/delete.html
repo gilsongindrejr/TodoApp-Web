@@ -1,13 +1,14 @@
 {% extends 'base.html' %}
+{% load i18n %}
 {% load bootstrap4 %}
 {% block content %}
     <form method="post">
         {% csrf_token %}
-        <h1>Are you sure you want to delete task "{{ object }}"?    </h1>
+        <h1>{% trans 'Are you sure you want to delete task' %} "{{ object }}"?</h1>
         {% buttons %}
-            <button type="submit" class="btn btn-danger">Confirm</button>
+            <button type="submit" class="btn btn-danger">{% trans 'Confirm' %}</button>
         <a href="{% url 'index' %}">
-            <button type="button" class="btn btn-warning">Cancel</button>
+            <button type="button" class="btn btn-warning">{% trans 'Cancel' %}</button>
         </a>
         {% endbuttons %}
     </form>

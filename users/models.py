@@ -34,7 +34,7 @@ class CustomUserManager(BaseUserManager):
 
 class CustomUserModel(AbstractUser):
     email = models.EmailField('Email', max_length=50, unique=True)
-    is_staff = models.BooleanField(_('is_staff'), default=True)
+    is_staff = models.BooleanField('is_staff', default=True)
     first_name = models.CharField(_('first name'), max_length=150, blank=False)
     last_name = models.CharField(_('last name'), max_length=150, blank=False)
     username = None
