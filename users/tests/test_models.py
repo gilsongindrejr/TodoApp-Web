@@ -6,7 +6,13 @@ from users.models import CustomUserModel
 class CustomUserModelTestCase(TestCase):
 
     def setUp(self):
-        self.user = CustomUserModel.objects.create_user(email='user@email.com', password='4231')
+        self.user = CustomUserModel.objects.create_user(
+            email='user@email.com',
+            password='4231',
+            first_name='user',
+            last_name='name',
+            telephone='1233456789'
+        )
         self.superuser = CustomUserModel.objects.create_superuser(email='superuser@email.com', password='4231')
 
     def test_str(self):
